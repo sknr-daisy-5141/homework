@@ -1,0 +1,38 @@
+"""
+Gitの使い方
+クローンコマンドでディレクトリをローカルに作成する。
+git clone https://github.com/あなたのユーザー名/リポジトリ名.git
+
+変更状態の確認
+git status
+
+すべての変更の追加
+git add .
+
+指定したファイルだけ追加
+git add  ファイル名
+
+変更をコミットする
+git commit -m "コメント内容"
+
+GitHubへアップロード
+git push origin main
+
+上記基本的な操作
+
+よく使うコマンド
+git status	現在の変更状態を確認する
+git add .	変更をまとめてステージングする
+git add ファイル名	指定したファイルだけステージングする
+git commit -m "メッセージ"	変更を履歴として記録する
+git push origin main	GitHubに反映する
+git pull origin main	GitHub側の最新状態を取得して反映する
+git log	コミット履歴を見る
+git diff	変更差分を見る
+git branch	ブランチ一覧を確認する
+git switch ブランチ名	ブランチを切り替える
+git switch -c 新しいブランチ名	新しいブランチを作成して切り替える
+git remote -v	接続先のリモートURLを確認する
+git rm ファイル名	Git管理下のファイルを削除する
+
+"""
