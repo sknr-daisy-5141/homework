@@ -17,20 +17,20 @@ rinsetu=[
 def road(cu_point, goal, rinsetu_line, process, edge_count):
     process.append(cu_point + 1)
 
-    # 全ての辺を使い切ったら
+    #すべて使い切ったかどうか
     if edge_count == 0:
         if cu_point == goal:
             print("完全経路:", process)
         process.pop()
-        return  # ←Trueを返さない
+        return  
 
     for next_point in range(len(rinsetu_line)):
         if rinsetu_line[cu_point][next_point] == 1:
-            new_graph = [row[:] for row in rinsetu_line]
+            new_graph = [row[:] for row in rinsetu_line]#コピーの作成
             new_graph[cu_point][next_point] = 0
             new_graph[next_point][cu_point] = 0
 
-            # ←returnを受け取らない
+            
             road(next_point, goal, new_graph, process, edge_count - 1)
 
 
